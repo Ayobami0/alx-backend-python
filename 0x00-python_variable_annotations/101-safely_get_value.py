@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 """11. More involved type annotations"""
 
-from collections.abc import Mapping
-from types import NoneType
-from typing import Any, TypeVar, Union
+from typing import Any, Mapping, TypeVar, Union
 
 T = TypeVar("T")
 
 
 def safely_get_value(
-    dct: Mapping, key: Any, default: Union[T, NoneType] = None
-) -> Union[T, NoneType]:
+    dct: Mapping, key: Any, default: Union[T, None] = None
+) -> Union[Any, T]:
     """Safely gets a value.
 
     Param:

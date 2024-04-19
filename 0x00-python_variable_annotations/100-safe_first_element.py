@@ -2,11 +2,10 @@
 """10. Duck typing - first element of a sequence"""
 
 # The types of the elements of the input are not know
-from types import NoneType
 from typing import Any, Sequence, Union
 
 
-def safe_first_element(lst: Sequence[Any]) -> Union[Any, NoneType]:
+def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
     """Gets the first item in a sequence
 
     Param:
