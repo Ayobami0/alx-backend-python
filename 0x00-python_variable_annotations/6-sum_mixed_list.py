@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""6. Complex types - mixed list"""
+"""6. Complex types - mixed list."""
 from typing import List, Union
 
 
-def sum_mixed_list(mxd_lst: List[Union[float, int]]) -> float:
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """Sums a list of floats and/or ints and retuns the result
 
     Param:
