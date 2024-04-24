@@ -6,7 +6,8 @@ from random import uniform
 
 
 async def wait_random(max_delay: int = 10) -> float:
-    """Waits for a random delay between 0 and max_delay seconds and eventually returns it.
+    """Waits for a random delay between 0 and
+    max_delay seconds and eventually returns it.
 
     Param:
         max_delay (int): the maximum delay to wait for
