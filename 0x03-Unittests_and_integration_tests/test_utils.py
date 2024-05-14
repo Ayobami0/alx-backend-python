@@ -43,3 +43,21 @@ class TestAccessNestedMap(unittest.TestCase):
 
         get.assert_called_once_with(url)
         self.assertEqual(res, payload)
+
+    def test_memoize(self):
+        """Test memonize"""
+        class TestClass:
+
+            def a_method(self):
+                return 42
+
+            @utils.memoize
+            def a_property(self):
+                return self.a_method()
+
+        with mock.patch.object(TestClass, 'a_method') as mock_testclass:
+            obj = TestClass()
+            obj.a_property()
+            obj.a_property()
+
+        mock_testclass.assert_called_once()
